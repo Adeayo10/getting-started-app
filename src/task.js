@@ -22,3 +22,15 @@ function StartDB(){
 
     return this;
 }
+
+function Test(){
+    this.test = function(){
+        console.log('Testing...');
+    };
+
+    this.run = function(){
+        this.test();
+    };
+
+    return this;
+}

@@ -29,6 +29,10 @@ jobs:
     #   with:
     #     ssh-private-key: ${{ secrets.SERVER_SSH_KEY }}
 
+    - name: set permission for tar file
+      run: |
+        chmod 600 getting-started-app.tar
+
     - name: copy file via ssh password
       uses: appleboy/scp-action@master
       with:
@@ -38,6 +42,8 @@ jobs:
         port: 22
         source: "getting-started-app.tar"
         target: "/home/${{ secrets.SERVER_USER }}/getting-started-app.tar"
+       
+
       
 
 

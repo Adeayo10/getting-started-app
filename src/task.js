@@ -34,3 +34,6 @@ function Test(){
 
     return this;
 }
+function display(){
+    console.log('Displaying...');
+}
